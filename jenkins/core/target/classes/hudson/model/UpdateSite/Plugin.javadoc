@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 optionalDependencies=\ Optional dependencies of this plugin.\n
 isCompatibleWithInstalledVersion=\ If the plugin is already installed, and the new version of the plugin has a "compatibleSinceVersion"\n value (i.e., it's only directly compatible with that version or later), this will check to\n see if the installed version is older than the compatible-since version. If it is older, it'll return false.\n If it's not older, or it's not installed, or it's installed but there's no compatibleSinceVersion\n specified, it'll return true.\n
 requiredCore=\ Version of Jenkins core this plugin was compiled against.\n

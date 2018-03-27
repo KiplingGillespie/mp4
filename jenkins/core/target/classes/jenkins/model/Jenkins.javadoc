@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 isQuietingDown=\ Returns true if Jenkins is quieting down.\n <p>\n No further jobs will be executed unless it\n can be finished while other current pending builds\n are still in progress.\n
 isUseCrumbs=\ If true, all the POST requests to Jenkins would have to have crumb in it to protect\n Jenkins from CSRF vulnerabilities.\n
 isUseSecurity=\ A convenience method to check if there's some security\n restrictions in place.\n

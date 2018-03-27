@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 getIconClassName=\ Get health status icon class.\n\n @return The health status icon class.\n
 getScore=\ Getter for property 'score'.\n\n @return The percentage health score (from 0 to 100 inclusive).\n
 getDescription=\ Getter for property 'description'.\n\n @return Value for property 'description'.\n

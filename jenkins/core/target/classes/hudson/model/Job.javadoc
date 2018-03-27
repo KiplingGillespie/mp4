@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 getLastUnsuccessfulBuild=\ Returns the last build that was anything but stable, if any. Otherwise null.\n @see \#getLastSuccessfulBuild\n
 getLastSuccessfulBuild=\ Returns the last successful build, if any. Otherwise null. A successful build\n would include either {@link Result\#SUCCESS} or {@link Result\#UNSTABLE}.\n \n @see \#getLastStableBuild()\n
 getLastCompletedBuild=\ Returns the last completed build, if any. Otherwise null.\n

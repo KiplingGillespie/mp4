@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 isJnlpAgent=\ Returns true if this computer is supposed to be launched via JNLP.\n @deprecated since 2008-05-18.\n     See {@linkplain \#isLaunchSupported()} and {@linkplain ComputerLauncher}\n
 getOneOffExecutors=\ Gets the read-only snapshot view of all {@link OneOffExecutor}s.\n
 isTemporarilyOffline=\ Returns true if this node is marked temporarily offline by the user.\n\n <p>\n In contrast, {@link \#isOffline()} represents the actual online/offline\n state. For example, this method may return false while {@link \#isOffline()}\n returns true if the slave agent failed to launch.\n\n @deprecated\n      You should almost always want {@link \#isOffline()}.\n      This method is marked as deprecated to warn people when they\n      accidentally call this method.\n

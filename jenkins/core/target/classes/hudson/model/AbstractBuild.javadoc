@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 getBuildFingerprints=\ get the fingerprints associated with this build\n\n @return never null\n
 getCulprits=\ List of users who committed a change since the last non-broken build till now.\n\n <p>\n This list at least always include people who made changes in this build, but\n if the previous build was a failure it also includes the culprit list from there.\n\n @return\n      can be empty but never null.\n
 getChangeSet=\ Gets the changes incorporated into this build.\n\n @return never null.\n

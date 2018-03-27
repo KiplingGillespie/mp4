@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 isLikelyStuck=\ Returns true if the current build is likely stuck.\n\n <p>\n This is a heuristics based approach, but if the build is suspiciously taking for a long time,\n this method returns true.\n
 getNumber=\ Gets the executor number that uniquely identifies it among\n other {@link Executor}s for the same computer.\n\n @return\n      a sequential number starting from 0.\n
 isIdle=\ Returns true if this {@link Executor} is ready for action.\n

@@ -1,4 +1,4 @@
-#Tue Mar 27 13:51:02 EDT 2018
+#Tue Mar 27 14:38:19 EDT 2018
 getAbsoluteUrl=\ Obtains the absolute URL to this build.\n\n @deprecated\n      This method shall <b>NEVER</b> be used during HTML page rendering, as it's too easy for\n      misconfiguration to break this value, with network set up like Apache reverse proxy.\n      This method is only intended for the remote API clients who cannot resolve relative references.\n
 getId=\ Unique ID of this build.\n Usually the decimal form of {@link \#number}, but may be a formatted timestamp for historical builds.\n
 getTimestamp=\ When the build is scheduled.\n\n @see \#getStartTimeInMillis()\n
