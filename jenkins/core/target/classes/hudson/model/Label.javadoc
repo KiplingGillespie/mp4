@@ -1,0 +1,10 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getName=\ Alias for {@link \#getDisplayName()}.\n
+isOffline=\ Returns true if all the nodes of this label is offline.\n
+getIdleExecutors=\ Number of idle {@link Executor}s that can start working immediately.\n
+getClouds=\ Gets all {@link Cloud}s that can launch for this label.\n
+getTiedJobs=\ Returns projects that are tied on this node.\n
+getTotalExecutors=\ Number of total {@link Executor}s that belong to this label that are functioning.\n <p>\n This excludes executors that belong to offline nodes.\n
+getNodes=\ Gets all {@link Node}s that belong to this label.\n
+getBusyExecutors=\ Number of busy {@link Executor}s that are carrying out some work right now.\n
+getDescription=\ Returns a human readable text that explains this label.\n

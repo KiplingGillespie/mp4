@@ -1,0 +1,7 @@
+#Tue Mar 27 13:51:02 EDT 2018
+displayName=\ Human readable caption of the menu item. Do not use HTML.\n
+subMenu=\ If this is a submenu, definition of subitems.\n
+url=\ Target of the link.\n\n This can start with '/', but it must not be a relative URL, since\n you cannot really tell which page this context menu is used.\n
+requiresConfirmation=\ True to require confirmation after a click.\n @since 1.512\n
+post=\ True to make a POST request rather than GET.\n @since 1.504\n
+icon=\ Optional URL to the icon image. Rendered as 24x24.\n

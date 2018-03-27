@@ -1,0 +1,17 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getLastUnsuccessfulBuild=\ Returns the last build that was anything but stable, if any. Otherwise null.\n @see \#getLastSuccessfulBuild\n
+getLastSuccessfulBuild=\ Returns the last successful build, if any. Otherwise null. A successful build\n would include either {@link Result\#SUCCESS} or {@link Result\#UNSTABLE}.\n \n @see \#getLastStableBuild()\n
+getLastCompletedBuild=\ Returns the last completed build, if any. Otherwise null.\n
+getLastUnstableBuild=\ Returns the last unstable build, if any. Otherwise null.\n @see \#getLastSuccessfulBuild\n
+getNextBuildNumber=\ Peeks the next build number.\n
+getAllProperties=\ List of all {@link JobProperty} exposed primarily for the remoting API.\n @since 1.282\n
+getIconColor=\ Used as the color of the status ball for the project.\n
+getLastStableBuild=\ Returns the last stable build, if any. Otherwise null.\n @see \#getLastSuccessfulBuild\n
+getLastBuild=\ Returns the last build.\n @see LazyBuildMixIn\#getLastBuild\n
+getLastFailedBuild=\ Returns the last failed build, if any. Otherwise null.\n
+isKeepDependencies=\ If true, it will keep all the build logs of dependency components.\n (This really only makes sense in {@link AbstractProject} but historically it was defined here.)\n
+isBuildable=\ Returns true if we should display "build now" icon\n
+getQueueItem=\ If this job is in the build queue, return its item.\n
+getBuilds=\ Gets the read-only view of all the builds.\n \n @return never null. The first entry is the latest build.\n
+getFirstBuild=\ Returns the oldest build in the record.\n @see LazyBuildMixIn\#getFirstBuild\n
+getNewBuilds=\ Gets the read-only view of the recent builds.\n\n @since 1.485\n

@@ -1,0 +1,5 @@
+package jenkins;
+contributor(context(ctype:'jenkins.ToolsTagLib')) {
+  method name:'label', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+}

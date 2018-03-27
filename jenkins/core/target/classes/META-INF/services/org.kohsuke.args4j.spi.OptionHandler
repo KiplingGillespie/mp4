@@ -1,0 +1,5 @@
+hudson.cli.handlers.AbstractItemOptionHandler
+hudson.cli.handlers.AbstractProjectOptionHandler
+hudson.cli.handlers.NodeOptionHandler
+hudson.cli.handlers.TopLevelItemOptionHandler
+hudson.cli.handlers.ViewOptionHandler

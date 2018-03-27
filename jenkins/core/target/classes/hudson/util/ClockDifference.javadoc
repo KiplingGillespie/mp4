@@ -1,0 +1,2 @@
+#Tue Mar 27 13:51:02 EDT 2018
+diff=\ The difference in milliseconds.\n\n Positive value means the slave is behind the master,\n negative value means the slave is ahead of the master.\n

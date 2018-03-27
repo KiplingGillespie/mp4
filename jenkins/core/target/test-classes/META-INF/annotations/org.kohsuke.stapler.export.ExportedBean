@@ -1,0 +1,7 @@
+hudson.cli.handlers.ViewOptionHandlerTest$CompositeView
+hudson.model.AbstractItemTest$StubAbstractItem
+hudson.model.LoadStatisticsTest$Modern
+hudson.model.StubJob
+hudson.model.ViewTest$CompositeView
+hudson.slaves.NodeListTest$DummyNode
+hudson.slaves.NodeListTest$EphemeralNode

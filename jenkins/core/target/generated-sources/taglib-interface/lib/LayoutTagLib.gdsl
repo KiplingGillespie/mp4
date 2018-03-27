@@ -1,0 +1,190 @@
+package lib;
+contributor(context(ctype:'lib.LayoutTagLib')) {
+  method name:'icon', type:void, params:[args:[
+    parameter(name:'class',type:'java.lang.Object', doc:"""
+The icon class specification e.g. 'icon-help icon-sm', 'icon-blue icon-md', 'icon-blue-anime icon-xlg'.
+"""),
+    parameter(name:'src',type:'java.lang.Object', doc:"""
+Icon source raw URL. Only relevant if the 'class' attribute is NOT specified.
+"""),
+    parameter(name:'onclick',type:'java.lang.Object', doc:"""
+onclick handler.
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+title
+"""),
+    parameter(name:'style',type:'java.lang.Object', doc:"""
+style
+"""),
+    parameter(name:'tooltip',type:'java.lang.Object', doc:"""
+tooltip
+"""),
+    parameter(name:'alt',type:'java.lang.Object', doc:"""
+alt
+"""),
+  ], dummy:void, c:Closure]
+  method name:'header', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'copyButton', type:void, params:[args:[
+    parameter(name:'tooltip',type:'java.lang.Object', doc:"""
+Tooltip of the button. Currently this doesn't work as reliably as we'd like. More ZeroClipboard hacking is likely necessary.
+"""),
+    parameter(name:'text',type:'java.lang.Object', doc:"""
+Text to be copied into the clipboard.
+"""),
+    parameter(name:'message',type:'java.lang.Object', doc:"""
+Confirmation message to be shown once the text is copied. This is required as in some browsers, button doesn't properly provide feedback to user actions due to the nature of the hack needed to make copy work.
+"""),
+    parameter(name:'container',type:'java.lang.Object', doc:"""
+Specify the CSS selector (like ".foo") that points to the ancestor block element that has "positive:relative". According to ZeroClipboard documentation, having such container would improve the accuracy of invisible flash overlay.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'stopButton', type:void, params:[args:[
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+Link target. Relative to the current page.
+"""),
+    parameter(name:'alt',type:'java.lang.Object', doc:"""
+Alt text for image.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'isAdminOrTest', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'layout', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Title of the HTML page. Rendered into &lt;title> tag.
+"""),
+    parameter(name:'norefresh',type:'java.lang.Object', doc:"""
+If non-null and not "false", auto refresh is disabled on this page. This is necessary for pages that include forms.
+"""),
+    parameter(name:'css',type:'java.lang.Object', doc:"""
+specify path that starts from "/" for loading additional CSS stylesheet. path is interprted as relative to the context root. e.g., {noformat}&lt;l:layout css="/plugin/mysuperplugin/css/myneatstyle.css">{noformat} This was originally added to allow plugins to load their stylesheets, but *the use of thie attribute is discouraged now.* plugins should now do so by inserting &lt;style> elements and/or &lt;script> elements in &lt;l:header/> tag.
+"""),
+    parameter(name:'permission',type:'java.lang.Object', doc:"""
+If given, this page is only made available to users that has the specified permission. (The permission will be checked against the "it" object.)
+"""),
+  ], dummy:void, c:Closure]
+  method name:'breadcrumbBar', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'rightspace', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'tabBar', type:void, params:[args:[
+    parameter(name:'class',type:'java.lang.Object', doc:"""
+'tabBarFrame' class specification. This will allow styling.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'yui', type:void, params:[args:[
+    parameter(name:'module',type:'java.lang.Object', doc:"""
+YUI module name to load.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'hasPermission', type:void, params:[args:[
+    parameter(name:'permission',type:'Permission', doc:"""
+permission object to check. If this is null, the body will be also rendered.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'progressiveRendering', type:void, params:[args:[
+    parameter(name:'handler',type:'java.lang.Object', doc:"""
+Instance of jenkins.util.ProgressiveRendering.
+"""),
+    parameter(name:'callback',type:'java.lang.Object', doc:"""
+JavaScript expression that evaluates to the function taking one JSON-valued parameter which renders results as they come.
+"""),
+    parameter(name:'tooltip',type:'java.lang.Object', doc:"""
+Optional tooltip for progress bar.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'ajax', type:void, params:[args:[
+    parameter(name:'contentType',type:'java.lang.Object', doc:"""
+Content-type of the response page. This will be ignored if this tag is encountered while evaluating a page that has called l:layout tag.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'renderOnDemand', type:void, params:[args:[
+    parameter(name:'tag',type:'java.lang.Object', doc:"""
+Place holder HTML tag. By default it's DIV, but depending on where this is used, you might need other tags (e.g., inside a table.)
+"""),
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS class names, so that you can discover this tag more easily from your JavaScript.
+"""),
+    parameter(name:'capture',type:'java.lang.Object', doc:"""
+','-separated list of variables to capture and make available when later evaluating the body.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'main_panel', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'breakable', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+Unescaped value to output
+"""),
+  ], dummy:void, c:Closure]
+  method name:'pane', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Title of the box. Can include HTML.
+"""),
+    parameter(name:'width',type:'java.lang.Object', doc:"""
+Specify the number of columns in the table (so that the title can stretch to the entire table width.
+"""),
+    parameter(name:'id',type:'java.lang.Object', doc:"""
+@id of the table, if specified.
+"""),
+    parameter(name:'class',type:'java.lang.Object', doc:"""
+Pane table class specification.
+"""),
+    parameter(name:'footer',type:'java.lang.Object', doc:"""
+Footer of the box. Can include HTML.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'breadcrumb', type:void, params:[args:[
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+URL that the breadcrumb item links to. Can be omitted.
+"""),
+    parameter(name:'id',type:'java.lang.Object', doc:"""
+If specified, this ID will be assigned to the LI element. This is useful for programmatically adding the context menu
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Display name of the breadcrumb.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'confirmationLink', type:void, params:[args:[
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+The URL to go to.
+"""),
+    parameter(name:'post',type:'java.lang.Object', doc:"""
+Use POST rather than GET (recommended).
+"""),
+    parameter(name:'message',type:'java.lang.Object', doc:"""
+A confirmation dialog message.
+"""),
+    parameter(name:'class',type:'java.lang.Object', doc:"""
+A CSS class to use to style the link.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'task', type:void, params:[args:[
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+Link target. Relative to the current page.
+"""),
+    parameter(name:'icon',type:'java.lang.Object', doc:"""
+URL to an icon image, or the icon class specification. If using an image URL, the image should be 24x24 in size and relative to the context path of Hudson. Common values include: # "icon-folder icon-md" is an example of using a class spec for a medium folder icon # "images/24x24/..." then points to the stock icon resources # "plugin/foobar/abc/def.png" that points to "src/main/webapp/abc/def.png" in your plugin resources
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable text that follows the icon.
+"""),
+    parameter(name:'enabled',type:'java.lang.Object', doc:"""
+If specified, then this controls whether the task is enabled or not.
+"""),
+    parameter(name:'contextMenu',type:'boolean', doc:"""
+If "false", remove this item from the context menu.
+"""),
+    parameter(name:'permission',type:'java.lang.Object', doc:"""
+If specified, the link will be only displayed when the current user has the specified permission against the "it" object. This is useful for showing links to restricted pages, as showing them to unprivileged users don't make sense.
+"""),
+    parameter(name:'post',type:'boolean', doc:"""
+If true, send a POST rather than a GET request. (onclick supersedes this except in the context menu.) (since 1.504)
+"""),
+    parameter(name:'requiresConfirmation',type:'boolean', doc:"""
+If true, require confirmation before clicking. Generally used with post="true". (onclick supersedes this except in the context menu.) (since 1.512)
+"""),
+    parameter(name:'confirmationMessage',type:'java.lang.Object', doc:"""
+Message to use for confirmation, if requested; defaults to title. (since 1.512)
+"""),
+  ], dummy:void, c:Closure]
+}

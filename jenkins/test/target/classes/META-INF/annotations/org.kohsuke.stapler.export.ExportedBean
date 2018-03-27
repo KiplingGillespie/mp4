@@ -1,0 +1,13 @@
+org.jvnet.hudson.test.ExtractChangeLogParser$ExtractChangeLogEntry
+org.jvnet.hudson.test.ExtractChangeLogParser$FileInZip
+org.jvnet.hudson.test.ExtractChangeLogSet
+org.jvnet.hudson.test.ExtractResourceSCM
+org.jvnet.hudson.test.ExtractResourceWithChangesSCM
+org.jvnet.hudson.test.FakeChangeLogSCM
+org.jvnet.hudson.test.FakeChangeLogSCM$EntryImpl
+org.jvnet.hudson.test.FakeChangeLogSCM$FakeChangeLogSet
+org.jvnet.hudson.test.MockFolder
+org.jvnet.hudson.test.PretendSlave
+org.jvnet.hudson.test.SingleFileSCM
+org.jvnet.hudson.test.TestCrumbIssuer
+org.jvnet.hudson.test.TestPluginManager

@@ -1,0 +1,4 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getJobs=\ Returns the list of {@link UpdateCenterJob} representing scheduled installation attempts.\n\n @return\n      can be empty but never null. Oldest entries first.\n
+getSiteList=\ The same as {@link \#getSites()} but for REST API.\n
+isRestartRequiredForCompletion=\ If any of the executed {@link UpdateCenterJob}s requires a restart\n to take effect, this method returns true.\n\n <p>\n This doesn't necessarily mean the user has scheduled or initiated\n the restart operation.\n\n @see \#isRestartScheduled()\n

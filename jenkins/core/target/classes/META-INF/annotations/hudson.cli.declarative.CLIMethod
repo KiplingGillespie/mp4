@@ -1,0 +1,6 @@
+hudson.model.AbstractItem
+hudson.model.AbstractProject
+hudson.model.Computer
+hudson.model.Queue
+hudson.model.Run
+jenkins.model.Jenkins

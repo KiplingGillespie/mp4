@@ -1,0 +1,7 @@
+#Tue Mar 27 13:51:02 EDT 2018
+isLikelyStuck=\ Returns true if the current build is likely stuck.\n\n <p>\n This is a heuristics based approach, but if the build is suspiciously taking for a long time,\n this method returns true.\n
+getNumber=\ Gets the executor number that uniquely identifies it among\n other {@link Executor}s for the same computer.\n\n @return\n      a sequential number starting from 0.\n
+isIdle=\ Returns true if this {@link Executor} is ready for action.\n
+getCurrentWorkUnit=\ Returns the current {@link WorkUnit} (of {@link \#getCurrentExecutable() the current executable})\n that this executor is running.\n\n @return\n      null if the executor is idle.\n
+getCurrentExecutable=\ Returns the current build this executor is running.\n\n @return\n      null if the executor is idle.\n
+getProgress=\ Returns the progress of the current build in the number between 0-100.\n\n @return -1\n      if it's impossible to estimate the progress.\n

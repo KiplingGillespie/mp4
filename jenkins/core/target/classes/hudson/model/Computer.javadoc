@@ -1,0 +1,12 @@
+#Tue Mar 27 13:51:02 EDT 2018
+isJnlpAgent=\ Returns true if this computer is supposed to be launched via JNLP.\n @deprecated since 2008-05-18.\n     See {@linkplain \#isLaunchSupported()} and {@linkplain ComputerLauncher}\n
+getOneOffExecutors=\ Gets the read-only snapshot view of all {@link OneOffExecutor}s.\n
+isTemporarilyOffline=\ Returns true if this node is marked temporarily offline by the user.\n\n <p>\n In contrast, {@link \#isOffline()} represents the actual online/offline\n state. For example, this method may return false while {@link \#isOffline()}\n returns true if the slave agent failed to launch.\n\n @deprecated\n      You should almost always want {@link \#isOffline()}.\n      This method is marked as deprecated to warn people when they\n      accidentally call this method.\n
+getOfflineCause=\ If the computer was offline (either temporarily or not),\n this method will return the cause.\n\n @return\n      null if the system was put offline without given a cause.\n
+getNumExecutors=\ Number of {@link Executor}s that are configured for this computer.\n\n <p>\n When this value is decreased, it is temporarily possible\n for {@link \#executors} to have a larger number than this.\n
+getMonitorData=\ Expose monitoring data for the remote API.\n
+getOfflineCauseReason=\ If the computer was offline (either temporarily or not),\n this method will return the cause as a string (without user info).\n\n @return\n      empty string if the system was put offline without given a cause.\n
+getExecutors=\ Gets the read-only snapshot view of all {@link Executor}s.\n
+isIdle=\ Returns true if all the executors of this computer are idle.\n
+isManualLaunchAllowed=\ This method is called to determine whether manual launching of the slave is allowed at this point in time.\n @return {@code true} if manual launching of the slave is allowed at this point in time.\n
+isLaunchSupported=\ Returns true if this computer can be launched by Hudson proactively and automatically.\n\n <p>\n For example, JNLP slaves return {@code false} from this, because the launch process\n needs to be initiated from the slave side.\n

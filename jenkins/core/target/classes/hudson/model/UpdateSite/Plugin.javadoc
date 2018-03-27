@@ -1,0 +1,12 @@
+#Tue Mar 27 13:51:02 EDT 2018
+optionalDependencies=\ Optional dependencies of this plugin.\n
+isCompatibleWithInstalledVersion=\ If the plugin is already installed, and the new version of the plugin has a "compatibleSinceVersion"\n value (i.e., it's only directly compatible with that version or later), this will check to\n see if the installed version is older than the compatible-since version. If it is older, it'll return false.\n If it's not older, or it's not installed, or it's installed but there's no compatibleSinceVersion\n specified, it'll return true.\n
+requiredCore=\ Version of Jenkins core this plugin was compiled against.\n
+categories=\ Categories for grouping plugins, taken from labels assigned to wiki page.\n Can be null.\n
+excerpt=\ Optional excerpt string.\n
+compatibleSinceVersion=\ Optional version \# from which this plugin release is configuration-compatible.\n
+dependencies=\ Dependencies of this plugin.\n
+getInstalled=\ If some version of this plugin is currently installed, return {@link PluginWrapper}.\n Otherwise null.\n
+title=\ Human readable title of the plugin, taken from Wiki page.\n Can be null.\n\n <p>\n beware of XSS vulnerability since this data comes from Wiki\n
+getNeededDependencies=\ Returns a list of dependent plugins which need to be installed or upgraded for this plugin to work.\n
+wiki=\ Optional URL to the Wiki page that discusses this plugin.\n

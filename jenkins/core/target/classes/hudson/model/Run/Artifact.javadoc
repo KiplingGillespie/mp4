@@ -1,0 +1,3 @@
+#Tue Mar 27 13:51:02 EDT 2018
+relativePath=\ Relative path name from artifacts root.\n
+getFileName=\ Returns just the file name portion, without the path.\n

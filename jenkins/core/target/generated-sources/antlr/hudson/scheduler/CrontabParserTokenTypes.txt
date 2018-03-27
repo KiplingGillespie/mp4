@@ -1,0 +1,33 @@
+// $ANTLR 2.7.6 (2005-12-22): crontab.g -> CrontabParserTokenTypes.txt$
+CrontabParser    // output token vocab name
+WS("space")=4
+AT=5
+LITERAL_yearly="yearly"=6
+LITERAL_annually="annually"=7
+LITERAL_monthly="monthly"=8
+LITERAL_weekly="weekly"=9
+LITERAL_daily="daily"=10
+LITERAL_midnight="midnight"=11
+LITERAL_hourly="hourly"=12
+","=13
+"-"=14
+"/"=15
+"*"=16
+LITERAL_H="H"=17
+"("=18
+")"=19
+TOKEN("a number")=20
+MINUS=21
+STAR=22
+DIV=23
+OR=24
+H=25
+LPAREN=26
+RPAREN=27
+YEARLY=28
+ANNUALLY=29
+MONTHLY=30
+WEEKLY=31
+DAILY=32
+MIDNIGHT=33
+HOURLY=34

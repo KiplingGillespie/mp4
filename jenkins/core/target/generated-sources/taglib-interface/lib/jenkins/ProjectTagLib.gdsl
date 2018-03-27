@@ -1,0 +1,5 @@
+package lib.jenkins;
+contributor(context(ctype:'lib.jenkins.ProjectTagLib')) {
+  method name:'config_publishers', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+}

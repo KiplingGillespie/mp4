@@ -1,0 +1,10 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getWhy=\ Gets a human-readable status message describing why it's in the queue.\n
+getId=\ Unique ID (per master) that tracks the {@link Task} as it moves through different stages\n in the queue (each represented by different subtypes of {@link Item} and into any subsequent\n {@link Run} instance (see {@link Run\#getQueueId()}).\n @return\n @since 1.601\n
+task=\ Project to be built.\n
+getInQueueSince=\ Since when is this item in the queue.\n @return Unix timestamp\n
+isBuildable=\ Build is waiting the executor to become available.\n This flag is only used in {@link Queue\#getItems()} for\n 'pseudo' items that are actually not really in the queue.\n
+getUrl=\ Returns the URL of this {@link Item} relative to the context path of Jenkins\n\n @return\n      URL that ends with '/'.\n @since 1.519\n
+getParams=\ Gets a human-readable message about the parameters of this item\n @return String\n
+isBlocked=\ Build is blocked because another build is in progress,\n required {@link Resource}s are not available, or otherwise blocked\n by {@link Task\#isBuildBlocked()}.\n
+isStuck=\ True if the item is starving for an executor for too long.\n

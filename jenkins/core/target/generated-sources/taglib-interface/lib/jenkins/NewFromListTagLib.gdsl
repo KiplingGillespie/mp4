@@ -1,0 +1,23 @@
+package lib.jenkins;
+contributor(context(ctype:'lib.jenkins.NewFromListTagLib')) {
+  method name:'form', type:void, params:[args:[
+    parameter(name:'action',type:'java.lang.Object', doc:"""
+Specify where the form will be submitted to. Defaults to 'createItem'.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+Collection of Descriptors to be rendered.
+"""),
+    parameter(name:'nameTitle',type:'java.lang.Object', doc:"""
+Caption of the text box to receive the name of the newly created item. Something like "Job name"
+"""),
+    parameter(name:'copyTitle',type:'java.lang.Object', doc:"""
+Caption of the radio button that allows the user to copy from something that already exists.
+"""),
+    parameter(name:'showCopyOption',type:'java.lang.Object', doc:"""
+If true, an extra radio button will appear that allows the user to copy from something that already exists. See @copyTitle.
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+relative URL that point to the check method that validates the new name.
+"""),
+  ], dummy:void, c:Closure]
+}

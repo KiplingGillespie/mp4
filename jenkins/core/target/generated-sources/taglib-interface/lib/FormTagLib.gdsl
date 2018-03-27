@@ -1,0 +1,680 @@
+package lib;
+contributor(context(ctype:'lib.FormTagLib')) {
+  method name:'hetero_radio', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Field name in the parent object where databinding happens.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+all types that the user can add.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'select', type:void, params:[args:[
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS classes that the control gets.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the text box, in case both @value is and 'instance[field]' is null.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'number', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.String', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'name',type:'java.lang.String', doc:"""
+This becomes @name of the &lt;input> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the @value of the &lt;input> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the text box, in case both @value is and 'instance[field]' is null.
+"""),
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS class(es) to add (such as client-side validation clazz="required", "number" or "positive-number"; these may be combined, as clazz="required number").
+"""),
+    parameter(name:'checkMessage',type:'java.lang.Object', doc:"""
+Override the default error message when client-side validation fails, as with clazz="required", etc.
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+If specified, the value entered in this input field will be checked (via AJAX) against this URL, and errors will be rendered under the text field. If @field is specified, this will be inferred automatically, which is the recommended approach.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'textbox', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'autoCompleteField',type:'java.lang.Object', doc:"""
+Used for determining the autocomplete URL. If @field is specified, that will be used for this.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+This becomes @name of the &lt;input> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the @value of the &lt;input> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the text box, in case both @value is and 'instance[field]' is null.
+"""),
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS class(es) to add (such as client-side validation clazz="required", "number" or "positive-number"; these may be combined, as clazz="required number").
+"""),
+    parameter(name:'checkMessage',type:'java.lang.Object', doc:"""
+Override the default error message when client-side validation fails, as with clazz="required", etc.
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+If specified, the value entered in this input field will be checked (via AJAX) against this URL, and errors will be rendered under the text field. If @field is specified, this will be inferred automatically, which is the recommended approach.
+"""),
+    parameter(name:'autoCompleteDelimChar',type:'java.lang.Object', doc:"""
+A single character that can be used as a delimiter for autocompletion. Normal autocomplete will replace the entire content of the text box with the autocomplete selection. With this attribute set, the selection will be appended with the delimiter to the existing value of the text box.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'dropdownListBlock', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+value of the list item. set to &lt;option value="...">
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+human readable text displayed for this list item.
+"""),
+    parameter(name:'selected',type:'boolean', doc:"""
+is this value initially selected?
+"""),
+    parameter(name:'staplerClass',type:'java.lang.Object', doc:"""
+provide hint for stapler data binding. typically set to \${descriptor.clazz.name} if dropdownList is for a list of descriptors.
+"""),
+    parameter(name:'lazy',type:'java.lang.Object', doc:"""
+If specified, the content of the dropdownListBlock will be rendered lazily when it first becomes visible. The attribute value must be the variables to be captured. See the @capture of &lt;renderOnDemand> tag.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'radioBlock', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+Name of the radio button group. Radio buttons that are mutually exclusive need to have the same name.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+@value of the &lt;input> element.
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable label text to be rendered next to the radio button.
+"""),
+    parameter(name:'checked',type:'boolean', doc:"""
+Should this control be initially checked or not?
+"""),
+    parameter(name:'inline',type:'java.lang.Object', doc:"""
+if present, the folded section will not be grouped into a separate JSON object upon submission.
+"""),
+    parameter(name:'help',type:'java.lang.Object', doc:"""
+If specified, the (?) help icon will be rendered on the right, for in place help text. See &lt;f:entry> for the details.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'description', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'repeatable', type:void, params:[args:[
+    parameter(name:'var',type:'java.lang.Object', doc:"""
+variable that receives the item of the current iteration. Accessible from the body. Required unless @field is given.
+"""),
+    parameter(name:'varStatus',type:'java.lang.Object', doc:"""
+Status variable that indicates the loop status.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+name used in the structured form submission. Defaults to the same name as @var.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for the data binding.
+"""),
+    parameter(name:'items',type:'java.lang.Object', doc:"""
+The item collection to loop over. Required unless @field is given.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+Use this collection for items if items or @field is null
+"""),
+    parameter(name:'noAddButton',type:'java.lang.Object', doc:"""
+true if the default 'add' button (that adds a new copy) shouldn't be displayed. When you use this attribute,
+"""),
+    parameter(name:'add',type:'java.lang.Object', doc:"""
+If specified, this text will replace the standard "Add" text.
+"""),
+    parameter(name:'minimum',type:'java.lang.Object', doc:"""
+At least provide this number of copies initially. minimum="1" is useful to make sure there's always at least one entry for the user to fill in.
+"""),
+    parameter(name:'header',type:'java.lang.Object', doc:"""
+For each item, add this header. This also activates drag&amp;drop (where the header is a grip).
+"""),
+  ], dummy:void, c:Closure]
+  method name:'entry', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Name of the entry. Think of this like a label for the control.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for the databinding. TBD. When this attribute is specified, @help is inferred, and nested input controls don't need the @field nor @name.
+"""),
+    parameter(name:'description',type:'java.lang.Object', doc:"""
+If it's not obvious to the user as to what the control expects, specify some description text (which currently gets rendered as small text under the control, but that may change.) This text shouldn't get too long, and in recent Hudson, this feature is somewhat de-emphasized, in favor of the inline foldable help page specified via @help.
+"""),
+    parameter(name:'help',type:'java.lang.Object', doc:"""
+URL to the HTML page. When this attribute is specified, the entry gets a (?) icon on the right, and if the user clicks it, the contents of the given URL is rendered as a box below the entry. The URL should return an HTML document wrapped in a &lt;div> tag. The URL is interpreted to be rooted at the context path of Hudson, so it's normally something like "/plugin/foobar/help/abc.html".
+"""),
+  ], dummy:void, c:Closure]
+  method name:'readOnlyTextbox', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+This becomes @name of the &lt;input> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the @value of the &lt;input> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the text box, in case both @value is and 'instance[field]' is null.
+"""),
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS class(es) to add (such as client-side validation clazz="required", "number" or "positive-number"; these may be combined, as clazz="required number").
+"""),
+    parameter(name:'checkMessage',type:'java.lang.Object', doc:"""
+Override the default error message when client-side validation fails, as with clazz="required", etc.
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+If specified, the value entered in this input field will be checked (via AJAX) against this URL, and errors will be rendered under the text field. If @field is specified, this will be inferred automatically, which is the recommended approach.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'repeatableProperty', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for the data binding.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value to use for this collection when 'instance[field]' is null.
+"""),
+    parameter(name:'noAddButton',type:'java.lang.Object', doc:"""
+true if the default 'add' button (that adds a new copy) shouldn't be displayed. When you use this attribute,
+"""),
+    parameter(name:'add',type:'java.lang.Object', doc:"""
+If specified, this text will replace the standard "Add" text.
+"""),
+    parameter(name:'minimum',type:'java.lang.Object', doc:"""
+At least provide this number of copies initially. minimum="1" is useful to make sure there's always at least one entry for the user to fill in.
+"""),
+    parameter(name:'header',type:'java.lang.Object', doc:"""
+For each item, add this header. This also activates drag&amp;drop (where the header is a grip).
+"""),
+  ], dummy:void, c:Closure]
+  method name:'dropdownList', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable title text of this drop-down listbox. Shown in the same position as &lt;f:entry title="..." />
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+name of the drop-down list.
+"""),
+    parameter(name:'help',type:'java.lang.Object', doc:"""
+Path to the inline help. See &lt;f:entry help="..." />
+"""),
+  ], dummy:void, c:Closure]
+  method name:'expandableTextbox', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+This becomes @name of the &lt;input> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the @value of the &lt;input> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'slave_mode', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+Name of the &lt;select> element.
+"""),
+    parameter(name:'node',type:'java.lang.Object', doc:"""
+Node object.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'link', type:void, params:[args:[
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS classes.
+"""),
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+Link destination URL.
+"""),
+    parameter(name:'post',type:'java.lang.Object', doc:"""
+If this must send a POST request.
+"""),
+    parameter(name:'async',type:'java.lang.Object', doc:"""
+If this must send an asynchronous request.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'bottomButtonBar', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'property', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'propertyDescriptor',type:'java.lang.Object', doc:"""
+If specified, bypass the item descriptor inference and use this instead.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'apply', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'helpArea', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'option', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The value to be sent when the form is submitted. If omitted, the body of the tag will be placed in the value attribute as well (due to the browser incompatibility between IE and Firefox, value attribute must be included).
+"""),
+    parameter(name:'selected',type:'boolean', doc:"""
+If true, the option value appears as selected.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'checkbox', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'checked',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'json',type:'java.lang.Object', doc:"""
+Normally, the submitted JSON will be boolean indicating whether the checkbox was checked or not. This is sometimes inconvenient if you have a UI that lets user select a subset of a set. If this attribute is present, the submitted JSON will have this as a string value if the checkbox is checked, and none otherwise, making the subset selection easier.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the check box, in case both @checked and @instance are null. If this attribute is unspecified or null, it defaults to unchecked, otherwise checked.
+"""),
+    parameter(name:'id',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'onclick',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'class',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'negative',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+If specified, this human readable text will follow the checkbox, and clicking this text also toggles the checkbox.
+"""),
+    parameter(name:'tooltip',type:'java.lang.Object', doc:"""
+Used as tooltip of the checkbox, and, if a title is specified, of the title
+"""),
+  ], dummy:void, c:Closure]
+  method name:'repeatableHeteroProperty', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for the data binding.
+"""),
+    parameter(name:'addCaption',type:'java.lang.Object', doc:"""
+caption of the 'add' button.
+"""),
+    parameter(name:'deleteCaption',type:'java.lang.Object', doc:"""
+caption of the 'delete' button.
+"""),
+    parameter(name:'targetType',type:'java.lang.Object', doc:"""
+the type for which descriptors will be configured. Defaults to \${it.class} (optional)
+"""),
+    parameter(name:'hasHeader',type:'java.lang.Object', doc:"""
+For each item, add a caption from descriptor.getDisplayName(). This also activates drag&amp;drop (where the header is a grip), and help text support.
+"""),
+    parameter(name:'oneEach',type:'java.lang.Object', doc:"""
+If true, only allow up to one instance per descriptor.
+"""),
+    parameter(name:'menuAlign',type:'java.lang.Object', doc:"""
+Menu alignment against the button. Defaults to tl-bl
+"""),
+    parameter(name:'honorOrder',type:'java.lang.Object', doc:"""
+If true, insert new addition by default to their 'desired' location, which is the order induced by the descriptors.
+"""),
+    parameter(name:'capture',type:'java.lang.Object', doc:"""
+Config fragments from descriptors are rendered lazily by default, which means variables seen in the caller aren't visible to them. This attribute allows you to nominate additional variables and their values to be captured for descriptors.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'class_entry', type:void, params:[args:[
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+The describable class that we are instantiating via structured form submission.
+"""),
+    parameter(name:'descriptor',type:'java.lang.Object', doc:"""
+The descriptor of the describable that we are instantiating via structured form submission. Mutually exclusive with clazz.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'helpLink', type:void, params:[args:[
+    parameter(name:'url',type:'java.lang.Object', doc:"""
+URL to the HTML page. Optional. If not given, no help icon is displayed. The URL should return a UTF-8 encoded HTML fragment wrapped in a &lt;div> tag. The URL is interpreted to be rooted at the context path of Jenkins, so it's normally something like "/plugin/foobar/help/abc.html".
+"""),
+    parameter(name:'featureName',type:'java.lang.Object', doc:"""
+Name of the feature described by the help text, used for constructing the icon's alt attribute. Optional.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'form', type:void, params:[args:[
+    parameter(name:'action',type:'java.lang.Object', doc:"""
+@action of the form field. The URL where the submission is sent.
+"""),
+    parameter(name:'method',type:'java.lang.Object', doc:"""
+Submission method. Either post or get.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+@name of the form. In HTML this is not a mandatory attribute, but in Hudson you should have it for testing and page scraping, so this attribute is marked required.
+"""),
+    parameter(name:'enctype',type:'java.lang.Object', doc:"""
+@enctype of the &lt;form> HTML element.
+"""),
+    parameter(name:'target',type:'java.lang.Object', doc:"""
+@target of the &lt;form> HTML element. Works like &lt;a target="..."> and controls which window the result of the submission goes to.
+"""),
+    parameter(name:'tableClass',type:'java.lang.Object', doc:"""
+Optional class attribute for &lt;table> that is created in the form.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'editableComboBox', type:void, params:[args:[
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS classes that the control gets.
+"""),
+    parameter(name:'items',type:'java.lang.Object', doc:"""
+List of possible values. Either this or nested &lt;f:editableComboBoxValue/>s are required.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'dropdownDescriptorSelector', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+form field name. Used for databinding.
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable title of this control.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+Collection that lists up all the valid candidate descriptors. If unspecified, inferred from the type of the field.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+If specified, this will be chosen as the default value in case the current selection is null. The default can be an specific instance or a descriptor e.g. \${descriptor.defaultSettingsProvider} or \${descriptor.defaultSettingsProvider.descriptor}. In the later case, the from input fields will be empty.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'hetero_list', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+form name that receives an array for all the items in the heterogeneous list.
+"""),
+    parameter(name:'items',type:'java.util.Collection', doc:"""
+existing items to be displayed. Something iterable, such as array or collection.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+all types that the user can add.
+"""),
+    parameter(name:'addCaption',type:'java.lang.Object', doc:"""
+caption of the 'add' button.
+"""),
+    parameter(name:'deleteCaption',type:'java.lang.Object', doc:"""
+caption of the 'delete' button.
+"""),
+    parameter(name:'targetType',type:'java.lang.Object', doc:"""
+the type for which descriptors will be configured. Defaults to \${it.class} (optional)
+"""),
+    parameter(name:'hasHeader',type:'java.lang.Object', doc:"""
+For each item, add a caption from descriptor.getDisplayName(). This also activates drag&amp;drop (where the header is a grip), and help text support.
+"""),
+    parameter(name:'oneEach',type:'java.lang.Object', doc:"""
+If true, only allow up to one instance per descriptor.
+"""),
+    parameter(name:'menuAlign',type:'java.lang.Object', doc:"""
+Menu alignment against the button. Defaults to tl-bl
+"""),
+    parameter(name:'honorOrder',type:'java.lang.Object', doc:"""
+If true, insert new addition by default to their 'desired' location, which is the order induced by the descriptors.
+"""),
+    parameter(name:'capture',type:'java.lang.Object', doc:"""
+Config fragments from descriptors are rendered lazily by default, which means variables seen in the caller aren't visible to them. This attribute allows you to nominate additional variables and their values to be captured for descriptors.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'block', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'submit', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+If specified, becomes the value of the name attribute. When you have more than one submit button on the form, this can be used to determine which button is pressed, as the server will get a parameter by this name.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The text of the submit button. Something like "submit", "OK", etc.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'breadcrumb_config_outline', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'combobox', type:void, params:[args:[
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS classes that the control gets.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'prepareDatabinding', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'richtextarea', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'id',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'style',type:'java.lang.Object', doc:"""
+
+"""),
+  ], dummy:void, c:Closure]
+  method name:'optionalProperty', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+
+"""),
+  ], dummy:void, c:Closure]
+  method name:'enum_', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'section', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+The section header text. If null is given, the entire &lt;f:section> tag becomes no-op.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+Optional attribute to create a JSON object from this section.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'enumSet', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'editableComboBoxValue', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+
+"""),
+  ], dummy:void, c:Closure]
+  method name:'booleanRadio', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Databinding field.
+"""),
+    parameter(name:'true',type:'java.lang.Object', doc:"""
+Text to be displayed for the 'true' value. Defaults to 'Yes'.
+"""),
+    parameter(name:'false',type:'java.lang.Object', doc:"""
+Text to be displayed for the 'false' value. Defaults to 'No'.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'descriptorList', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable title of the section to be rendered in HTML.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+hudson.model.Descriptor collection whose configuration page is rendered.
+"""),
+    parameter(name:'instances',type:'java.lang.Object', doc:"""
+Map&lt;Descriptor,Describable> that defines current instances of those descriptors. These are used to fill initial values. Other classes that define the get(Descriptor) method works fine, too, such as DescribableList.
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Either @field or @instances are required (or @field may be inherited from the ancestor &lt;entry> element). If field is specified, instances are assumed to be instance[field]. When this attribute is specified, JSON structure is properly set up so that the databinding can set the field (or pass this collection as a constructor parameter of the same name. This is more modern way of doing databinding, and thus preferred approach.
+"""),
+    parameter(name:'targetType',type:'java.lang.Object', doc:"""
+the type for which descriptors will be configured. default to \${it.class}
+"""),
+    parameter(name:'forceRowSet',type:'java.lang.Object', doc:"""
+If specified, instead of a sequence of &lt;f:optionalBlock>s, draw a sequence of &lt;rowSet>s.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'advanced', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Caption of the button. By default "Advanced"
+"""),
+    parameter(name:'style',type:'java.lang.Object', doc:"""
+Additional styles
+"""),
+    parameter(name:'align',type:'java.lang.Object', doc:"""
+'left' or 'center' to align the button to left or center.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'withCustomDescriptorByName', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+
+"""),
+  ], dummy:void, c:Closure]
+  method name:'textarea', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+This becomes @name of the &lt;textarea> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the value of the &lt;textarea> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+    parameter(name:'default',type:'java.lang.Object', doc:"""
+The default value of the text box, in case both @value is and 'instance[field]' is null.
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+If specified, the value entered in this input field will be checked (via AJAX) against this URL, and errors will be rendered under the text field. If @field is specified, this will be inferred automatically, which is the recommended approach.
+"""),
+    parameter(name:'checkMethod',type:'java.lang.Object', doc:"""
+If specified, the HTTP method to use for input field will be checked (via AJAX)
+"""),
+    parameter(name:'codemirror-mode',type:'java.lang.Object', doc:"""
+Turns this text area into CodeMirror-assisted code editing text area. This attribute specifies the mode of CodeMirror, such as "text/x-java". See http://codemirror.net/ for more details.
+"""),
+    parameter(name:'codemirror-config',type:'java.lang.Object', doc:"""
+Specifies additional key/value pairs in the JSON format (except the start and end bracket) to be passed as CodeMirror option object.
+"""),
+    parameter(name:'previewEndpoint',type:'java.lang.Object', doc:"""
+If specified, this text area has preview feature. The previewEndpoint is used to obtain formatted html.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'descriptorRadioList', type:void, params:[args:[
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable title of the section to be rendered in HTML.
+"""),
+    parameter(name:'descriptors',type:'java.lang.Object', doc:"""
+hudson.model.Descriptor collection whose configuration page is rendered.
+"""),
+    parameter(name:'instance',type:'java.lang.Object', doc:"""
+The currently configured instance used to fill the initial values of the form.
+"""),
+    parameter(name:'targetType',type:'java.lang.Object', doc:"""
+the type for which descriptors will be configured. default to \${it.class}
+"""),
+    parameter(name:'varName',type:'java.lang.Object', doc:"""
+Used as a variable name as well as block name.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'rowSet', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+if the group head is not available outside, use this attribute to specify the name. @name and @ref are mutually exclusive.
+"""),
+    parameter(name:'ref',type:'java.lang.Object', doc:"""
+id of the thing that serves as the group head, if that's available separately
+"""),
+  ], dummy:void, c:Closure]
+  method name:'repeatableDeleteButton', type:void, params:[args:[
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+Caption of the button. Defaults to 'Delete'.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'optionalBlock', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+Name of the checkbox. Can be used by the server to determine if the block is collapsed or expanded at the time of submission. Note that when the block is collapsed, none of its child controls will send the values to the server (unlike &lt;f:advanced>)
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Human readable text that follows the checkbox. If this field is null, the checkbox degrades to a &lt;f:rowSet>, which provides a grouping at JSON level but on the UI there's no checkbox (and you always see the body of it.)
+"""),
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD. Either this or @name/@title combo is required.
+"""),
+    parameter(name:'checked',type:'java.lang.Object', doc:"""
+initial checkbox status. true/false.
+"""),
+    parameter(name:'help',type:'java.lang.Object', doc:"""
+If present, the (?) icon will be rendered on the right to show inline help. See @help for &lt;f:entry>.
+"""),
+    parameter(name:'negative',type:'java.lang.Object', doc:"""
+if present, the foldable section expands when the checkbox is unchecked.
+"""),
+    parameter(name:'inline',type:'java.lang.Object', doc:"""
+if present, the foldable section will not be grouped into a separate JSON object upon submission
+"""),
+  ], dummy:void, c:Closure]
+  method name:'password', type:void, params:[args:[
+    parameter(name:'field',type:'java.lang.Object', doc:"""
+Used for databinding. TBD.
+"""),
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+This becomes @name of the &lt;input> tag. If @field is specified, this value is inferred from it.
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+The initial value of the field. This becomes the @value of the &lt;input> tag. If @field is specified, the current property from the "instance" object will be set as the initial value automatically, which is the recommended approach.
+"""),
+    parameter(name:'clazz',type:'java.lang.Object', doc:"""
+Additional CSS class(es) to add (such as client-side validation clazz="required", "number" or "positive-number"; these may be combined, as clazz="required number").
+"""),
+    parameter(name:'checkUrl',type:'java.lang.Object', doc:"""
+If specified, the value entered in this input field will be checked (via AJAX) against this URL, and errors will be rendered under the text field. If @field is specified, this will be inferred automatically, which is the recommended approach.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'validateButton', type:void, params:[args:[
+    parameter(name:'method',type:'java.lang.Object', doc:"""
+Server-side method that handles the validation. For example, if this is 'foo', you need "doFoo" on your descriptor class.
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+Caption of the validate button. Should be internationalized.
+"""),
+    parameter(name:'progress',type:'java.lang.Object', doc:"""
+Caption of the text shown while the AJAX call is in progress. For example, "checking..."
+"""),
+    parameter(name:'with',type:'java.lang.Object', doc:"""
+','-separated list of fields that are sent to the server.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'invisibleEntry', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'radio', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'checked',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'value',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'id',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'onclick',type:'java.lang.Object', doc:"""
+
+"""),
+    parameter(name:'title',type:'java.lang.Object', doc:"""
+If specified, this human readable text will follow the radio, and clicking this text also toggles the radio.
+"""),
+  ], dummy:void, c:Closure]
+}

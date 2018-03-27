@@ -1,0 +1,13 @@
+// $ANTLR 2.7.6 (2005-12-22): labelExpr.g -> LabelExpressionParserTokenTypes.txt$
+LabelExpressionParser    // output token vocab name
+IFF=4
+IMPLIES=5
+OR=6
+AND=7
+NOT=8
+LPAREN=9
+RPAREN=10
+ATOM=11
+STRINGLITERAL=12
+IDENTIFIER_PART=13
+WS=14

@@ -1,0 +1,17 @@
+hudson/cli/CLI$1.class
+hudson/cli/FullDuplexHttpStream$1.class
+hudson/cli/CLI.class
+hudson/cli/CLI$4.class
+hudson/cli/SequenceOutputStream$Block.class
+hudson/cli/NoCheckTrustManager.class
+hudson/cli/SequenceOutputStream.class
+hudson/cli/client/Messages.class
+hudson/cli/CLI$2.class
+hudson/cli/FullDuplexHttpStream.class
+hudson/cli/CliPort.class
+hudson/cli/PrivateKeyProvider.class
+hudson/cli/Connection.class
+hudson/cli/CLI$3.class
+hudson/cli/CliEntryPoint.class
+hudson/cli/FullDuplexHttpStream$CrumbData.class
+hudson/cli/CLIConnectionFactory.class

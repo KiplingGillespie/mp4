@@ -1,0 +1,6 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getAuthor=\ The user who made this change.\n\n @return\n      never null.\n
+getTimestamp=\ Returns the timestamp of this commit in the {@link Date\#getTime()} format.\n\n <p>\n This method is primarily intended for visualization of the data.\n\n @return\n      -1 if the implementation doesn't support it (for example, in CVS a commit\n      spreads over time between multiple changes on multiple files, so there's no single timestamp.)\n @since 1.405\n
+getCommitId=\ Returns a human readable display name of the commit number, revision number, and such thing\n that identifies this entry.\n\n <p>\n This method is primarily intended for visualization of the data.\n\n @return\n      null if such a concept doesn't make sense for the implementation. For example,\n      in CVS there's no single identifier for commits. Each file gets a different revision number.\n @since 1.405\n
+getAffectedPaths=\ Returns a set of paths in the workspace that was\n affected by this change.\n\n <p>\n Contains string like 'foo/bar/zot'. No leading/trailing '/',\n and separator must be normalized to '/'.\n\n @return never null.\n
+getMsg=\ Gets the "commit message".\n\n <p>\n The exact definition depends on the individual SCM implementation.\n\n @return\n      Can be empty but never null.\n

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='plugin' version='1.610-SNAPSHOT'><l:dependency name='Jenkins plugin POM' groupId='org.jenkins-ci.plugins' artifactId='plugin' version='1.610-SNAPSHOT' url='http://jenkins-ci.org/plugin/'><l:description/></l:dependency></l:dependencies>

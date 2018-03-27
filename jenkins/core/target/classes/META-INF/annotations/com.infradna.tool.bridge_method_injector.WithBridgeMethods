@@ -1,0 +1,11 @@
+hudson.model.AbstractItem
+hudson.model.AbstractProject
+hudson.model.Fingerprint$BuildPtr
+hudson.model.Job
+hudson.model.Node
+hudson.model.Queue
+hudson.model.Queue$Item
+hudson.model.User
+hudson.util.PersistedList
+jenkins.mvn.GlobalSettingsProviderDescriptor
+jenkins.mvn.SettingsProviderDescriptor

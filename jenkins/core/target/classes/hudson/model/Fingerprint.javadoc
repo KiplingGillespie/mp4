@@ -1,0 +1,5 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getHashString=\ Gets the MD5 hash string.\n
+getTimestamp=\ Gets the timestamp when this record is created.\n
+getFileName=\ The file name (like "foo.jar" without path).\n
+getOriginal=\ The first build in which this file showed up,\n if the file looked like it's created there.\n <p>\n This is considered as the "source" of this file,\n or the owner, in the sense that this project "owns"\n this file.\n\n @return null\n      if the file is apparently created outside Hudson.\n

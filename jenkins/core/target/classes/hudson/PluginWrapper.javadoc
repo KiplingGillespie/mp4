@@ -1,0 +1,12 @@
+#Tue Mar 27 13:51:02 EDT 2018
+supportsDynamicLoad=\ Does this plugin supports dynamic loading?\n
+getShortName=\ Returns the short name suitable for URL.\n
+getVersion=\ Returns the version number of this plugin\n
+hasUpdate=\ Returns true if this plugin has update in the update center.\n\n <p>\n This method is conservative in the sense that if the version number is incomprehensible,\n it always returns false.\n
+getBackupVersion=\ returns the version of the backed up plugin,\n or null if there's no back up.\n
+isDeleted=\ Returns true if this plugin is deleted.\n\n The plugin continues to function in this session, but in the next session it'll disappear.\n
+getLongName=\ Returns a one-line descriptive name of this plugin.\n
+getUrl=\ Gets the URL that shows more information about this plugin.\n @return\n      null if this information is unavailable.\n @since 1.283\n
+isDowngradable=\ returns true if backup of previous version of plugin exists\n
+isEnabled=\ If true, the plugin is going to be activated next time\n Jenkins runs.\n
+isActive=\ Returns true if this plugin is enabled for this session.\n

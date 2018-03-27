@@ -1,0 +1,17 @@
+hudson.diagnosis.NullIdDescriptorMonitor
+hudson.init.impl.GroovyInitScript
+hudson.init.impl.InitialUserContent
+hudson.init.impl.InstallUncaughtExceptionHandler
+hudson.logging.LogRecorderManager
+hudson.model.AperiodicWork
+hudson.model.Computer
+hudson.model.ComputerSet
+hudson.model.PeriodicWork
+hudson.model.Queue
+hudson.model.Result
+hudson.model.UpdateCenter
+hudson.model.queue.QueueSorter
+hudson.security.csrf.CrumbIssuer
+hudson.util.DoubleLaunchChecker
+jenkins.model.Uptime
+jenkins.security.RekeySecretAdminMonitor

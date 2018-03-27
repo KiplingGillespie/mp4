@@ -1,0 +1,142 @@
+package lib;
+contributor(context(ctype:'lib.JenkinsTagLib')) {
+  method name:'logRecords', type:void, params:[args:[
+    parameter(name:'logRecords',type:'java.util.Collection<java.util.logging.LogRecord>', doc:"""
+Records to be displayed (assumed to be in reverse chronologic order).
+"""),
+  ], dummy:void, c:Closure]
+  method name:'jobLink', type:void, params:[args:[
+    parameter(name:'job',type:'hudson.model.Job', doc:"""
+Job object to be displayed.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'listScmBrowsers', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+form field name.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'editableDescription', type:void, params:[args:[
+    parameter(name:'permission',type:'java.lang.Object', doc:"""
+If the current user doesn't have this permission, the description is not editable.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'aggregated_failed_tests', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'failed_test', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'actions', type:void, params:[args:[
+    parameter(name:'actions',type:'java.lang.Object', doc:"""
+List of actions. Defaults to "it.allActions ?: it.actions"
+"""),
+  ], dummy:void, c:Closure]
+  method name:'ballColorTd', type:void, params:[args:[
+    parameter(name:'it',type:'hudson.model.BallColor', doc:"""
+Color of the ball or null to skip drawing.
+"""),
+    parameter(name:'iconSizeClass',type:'java.lang.Object', doc:"""
+Specifies the size of the icon. If unspecified, it inherits from the nearest setting in the ancestor call tree. Possible values are "icon-sm" (16x16), "icon-md" (24x24), "icon-lg" (32x32), "icon-xlg" (48x48)
+"""),
+    parameter(name:'style',type:'java.lang.Object', doc:"""
+Additional CSS styles to apply.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'projectView', type:void, params:[args:[
+    parameter(name:'jobs',type:'java.lang.Object', doc:"""
+Items to show.
+"""),
+    parameter(name:'useFullName',type:'boolean', doc:"""
+May be interpreted by columns to display the full name of a job.
+"""),
+    parameter(name:'jobBaseUrl',type:'String', doc:"""
+Deprecated. Using this attribute has no effect.
+"""),
+    parameter(name:'showViewTabs',type:'boolean', doc:"""
+If the caller rendered a view tabes, set this attribute so that CSS is adjusted accordingly.
+"""),
+    parameter(name:'views',type:'Collection<View>', doc:"""
+If non-null, render nested views.
+"""),
+    parameter(name:'indenter',type:'hudson.Indenter', doc:"""
+Optional Indenter instance used to indent items.
+"""),
+    parameter(name:'columnExtensions',type:'Collection<hudson.views.ListViewColumn>', doc:"""
+List view columns to render. If omitted, the default ones from ListView.getDefaultColumns() are used.
+"""),
+    parameter(name:'itemGroup',type:'hudson.model.ItemGroup', doc:"""
+The containing group, for purposes of name calculation.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'queue', type:void, params:[args:[
+    parameter(name:'items',type:'java.lang.Object', doc:"""
+Queue items to be displayed. Normally you should specify \${app.queue.approximateItemsQuickly}, but for example you can specify a sublist after some filtering to narrow down the list.
+"""),
+    parameter(name:'filtered',type:'java.lang.Object', doc:"""
+Indicates that the queue has been filtered, i.e. might not show all items.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'buildProgressBar', type:void, params:[args:[
+    parameter(name:'build',type:'hudson.model.Queue.Executable', doc:"""
+Build in progress. Must have a url property.
+"""),
+    parameter(name:'executor',type:'java.lang.Object', doc:"""
+Executor that's carrying out the build. If null, defaults to "build.executor"
+"""),
+  ], dummy:void, c:Closure]
+  method name:'buildListTable', type:void, params:[args:[
+    parameter(name:'builds',type:'java.lang.Object', doc:"""
+A collection of builds to be displayed.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'buildEnvVar', type:void, params:[args:[
+    parameter(name:'name',type:'java.lang.Object', doc:"""
+Name of the environment variable.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'node', type:void, params:[args:[
+    parameter(name:'value',type:'Node', doc:"""
+
+"""),
+    parameter(name:'valueStr',type:'String', doc:"""
+
+"""),
+  ], dummy:void, c:Closure]
+  method name:'test_result', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'executors', type:void, params:[args:[
+    parameter(name:'computers',type:'java.lang.Object', doc:"""
+If specified, this is the list of computers whose executors are rendered. If omitted, all the computers in the system will be rendered.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'summary', type:void, params:[args:[
+    parameter(name:'icon',type:'java.lang.Object', doc:"""
+The icon class name e.g. 'icon-folder'. On older versions of Jenkins, this attribute value used to be a link to the raw icon image, where relative paths were resolved against images/48x48 and absolute paths (that start with '/') were resolved against the context root of Hudson.
+"""),
+    parameter(name:'href',type:'java.lang.Object', doc:"""
+where the summary icon links to.
+"""),
+    parameter(name:'iconOnly',type:'boolean', doc:"""
+if true, hyperlink will only cover the icon, not the body.
+"""),
+    parameter(name:'permission',type:'hudson.security.Permission', doc:"""
+permission object. If specified, the link will be displayed only if you have a permission
+"""),
+  ], dummy:void, c:Closure]
+  method name:'abstractItemLink', type:void, params:[args:[
+  ], dummy:void, c:Closure]
+  method name:'artifactList', type:void, params:[args:[
+    parameter(name:'build',type:'hudson.model.Build', doc:"""
+Build object for which the artifacts are displayed
+"""),
+    parameter(name:'caption',type:'java.lang.Object', doc:"""
+Human readable title text
+"""),
+    parameter(name:'baseURL',type:'java.lang.Object', doc:"""
+If the hyperlink to artifacts are at another URL, specify the prefix.
+"""),
+  ], dummy:void, c:Closure]
+  method name:'propertyTable', type:void, params:[args:[
+    parameter(name:'items',type:'java.lang.Object', doc:"""
+A Map object that gets rendered as a table.
+"""),
+  ], dummy:void, c:Closure]
+}

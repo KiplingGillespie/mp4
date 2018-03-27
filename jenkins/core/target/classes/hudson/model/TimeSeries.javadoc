@@ -1,0 +1,3 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getLatest=\ Gets the most up-to-date data point value. {@code getHistory[0]}.\n
+getHistory=\ Gets the history data of the exponential moving average. The returned array should be treated\n as read-only and immutable.\n\n @return\n      Always non-null, contains at least one entry.\n

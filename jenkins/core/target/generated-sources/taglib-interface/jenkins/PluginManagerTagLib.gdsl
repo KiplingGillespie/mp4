@@ -1,0 +1,3 @@
+package jenkins;
+contributor(context(ctype:'jenkins.PluginManagerTagLib')) {
+}

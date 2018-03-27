@@ -1,0 +1,9 @@
+#Tue Mar 27 13:51:02 EDT 2018
+isQuietingDown=\ Returns true if Jenkins is quieting down.\n <p>\n No further jobs will be executed unless it\n can be finished while other current pending builds\n are still in progress.\n
+isUseCrumbs=\ If true, all the POST requests to Jenkins would have to have crumb in it to protect\n Jenkins from CSRF vulnerabilities.\n
+isUseSecurity=\ A convenience method to check if there's some security\n restrictions in place.\n
+getViews=\ Gets the read-only list of all {@link View}s.\n
+unlabeledLoad=\ Load statistics of the free roaming jobs and slaves.\n\n This includes all executors on {@link hudson.model.Node.Mode\#NORMAL} nodes and jobs that do not have any assigned nodes.\n\n @since 1.467\n
+getItems=\ Gets just the immediate children of {@link Jenkins}.\n\n @see \#getAllItems(Class)\n
+overallLoad=\ Load statistics of the entire system.\n\n This includes every executor and every job in the system.\n
+getPrimaryView=\ Returns the primary {@link View} that renders the top-page of Jenkins.\n

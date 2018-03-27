@@ -1,0 +1,12 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getAbsoluteUrl=\ Obtains the absolute URL to this build.\n\n @deprecated\n      This method shall <b>NEVER</b> be used during HTML page rendering, as it's too easy for\n      misconfiguration to break this value, with network set up like Apache reverse proxy.\n      This method is only intended for the remote API clients who cannot resolve relative references.\n
+getId=\ Unique ID of this build.\n Usually the decimal form of {@link \#number}, but may be a formatted timestamp for historical builds.\n
+getTimestamp=\ When the build is scheduled.\n\n @see \#getStartTimeInMillis()\n
+isBuilding=\ Returns true if the build is not completed yet.\n This includes "not started yet" state.\n
+getArtifacts=\ Gets the artifacts (relative to {@link \#getArtifactsDir()}.\n @return The list can be empty but never null\n
+getEstimatedDuration=\ Returns the estimated duration for this run if it is currently running.\n Default to {@link Job\#getEstimatedDuration()}, may be overridden in subclasses\n if duration may depend on run specific parameters (like incremental Maven builds).\n \n @return the estimated duration in milliseconds\n @since 1.383\n
+getResult=\ Returns the build result.\n\n <p>\n When a build is {@link \#isBuilding() in progress}, this method\n returns an intermediate result.\n @return The status of the build, if it has completed or some build step has set a status; may be null if the build is ongoing.\n
+getExecutor=\ Gets the {@link Executor} building this job, if it's being built.\n Otherwise null.\n \n This method looks for {@link Executor} who's {@linkplain Executor\#getCurrentExecutable() assigned to this build},\n and because of that this might not be necessarily in sync with the return value of {@link \#isBuilding()} &mdash;\n an executor holds on to {@link Run} some more time even after the build is finished (for example to\n perform {@linkplain Run.State\#POST_PRODUCTION post-production processing}.)\n @see Executables\#getExecutor\n
+getDuration=\ Gets the millisecond it took to build.\n
+getQueueId=\ Get the {@link Queue.Item\#getId()} of the original queue item from where this Run instance\n originated.\n @return The queue item ID.\n @since 1.601\n
+isKeepLog=\ Returns true if this log file should be kept and not deleted.\n\n This is used as a signal to the {@link BuildDiscarder}.\n

@@ -1,0 +1,9 @@
+#Tue Mar 27 13:51:02 EDT 2018
+busyExecutors=\ Number of busy executors and how it changes over time.\n
+connectingExecutors=\ Number of executors in the process of coming on-line and how it changes over time.\n @since 1.607\n
+totalExecutors=\ Number of total executors and how it changes over time.\n @deprecated use {@link \#onlineExecutors}. Note {@code totalExecutors\=\=onlineExecutors} for backward\n compatibility support.\n
+definedExecutors=\ Number of executors defined for Jenkins and how it changes over time.\n @since 1.607\n
+idleExecutors=\ Number of executors not executing and how it changes over time. Note the these executors may not be able to\n take work, see {@link \#availableExecutors}.\n @since 1.607\n
+availableExecutors=\ Number of executors not executing and available to take work and how it changes over time.\n @since 1.607\n
+onlineExecutors=\ Number of executors on-line and how it changes over time. Replaces {@link \#totalExecutors}\n @since 1.607\n
+queueLength=\ Number of {@link hudson.model.Queue.BuildableItem}s that can run on any node in this node set but blocked.\n

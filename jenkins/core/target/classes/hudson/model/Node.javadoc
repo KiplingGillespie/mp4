@@ -1,0 +1,6 @@
+#Tue Mar 27 13:51:02 EDT 2018
+getNodeDescription=\ Human-readable description of this node.\n
+getMode=\ Returns {@link Mode\#EXCLUSIVE} if this node is only available\n for those jobs that exclusively specifies this node\n as the assigned node.\n
+getNumExecutors=\ Returns the number of {@link Executor}s.\n\n This may be different from <code>getExecutors().size()</code>\n because it takes time to adjust the number of executors.\n
+getAssignedLabels=\ Returns the possibly empty set of labels that are assigned to this node,\n including the automatic {@link \#getSelfLabel() self label}, manually\n assigned labels and dynamically assigned labels via the\n {@link LabelFinder} extension point.\n\n This method has a side effect of updating the hudson-wide set of labels\n and should be called after events that will change that - e.g. a slave\n connecting.\n
+getNodeName=\ Name of this node.\n\n @return\n      "" if this is master\n
