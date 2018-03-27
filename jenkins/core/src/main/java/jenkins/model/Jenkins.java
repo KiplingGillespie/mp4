@@ -328,6 +328,11 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
      */
     // this field needs to be at the very top so that other components can look at this value even during unmarshalling
     private String version = "1.0";
+    
+    public void updateAndTrim(){
+    	jenkins.updateComputerList();
+        jenkins.trimLabels();
+    }
 
     /**
      * Number of executors of the master node.
