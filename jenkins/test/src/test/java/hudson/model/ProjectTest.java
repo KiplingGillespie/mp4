@@ -92,6 +92,7 @@ import org.junit.Ignore;
 import org.jvnet.hudson.test.Issue;
 import org.jvnet.hudson.test.Issue;
 import org.jvnet.hudson.test.TestBuilder;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -661,10 +662,9 @@ public class ProjectTest {
                fail("AccessDeniedException should be thrown.");
             }
         } 
-        auth.add(Job.READ, user.getId());
-        auth.add(Job.CONFIGURE, user.getId());
-        auth.add(Jenkins.READ, user.getId());
-        List<HtmlForm> forms = j.createWebClient().login(user.getId(), "password").goTo(project.getUrl()).getForms();
+        
+        List<HtmlForm> forms = addAuth(project, auth, user);
+        
         for(HtmlForm form:forms){
             if("enable".equals(form.getAttribute("action"))){
                 j.submit(form);
@@ -672,6 +672,16 @@ public class ProjectTest {
         }
        assertFalse("Project should be enabled.", project.isDisabled());
     }
+
+	private List<HtmlForm> addAuth(FreeStyleProject project,
+			GlobalMatrixAuthorizationStrategy auth, User user)
+			throws IOException, SAXException, Exception {
+		auth.add(Job.READ, user.getId());
+        auth.add(Job.CONFIGURE, user.getId());
+        auth.add(Jenkins.READ, user.getId());
+        List<HtmlForm> forms = j.createWebClient().login(user.getId(), "password").goTo(project.getUrl()).getForms();
+		return forms;
+	}
     
     /**
      * Job is un-restricted (no nabel), this is submitted to queue, which spawns an on demand slave
